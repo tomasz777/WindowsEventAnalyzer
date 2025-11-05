@@ -1,0 +1,127 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              ANALIZATOR DZIENNIKA ZDARZEŃ WINDOWS 11                         ║
+║                       Windows Event Analyzer                                 ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📍 LOKALIZACJA PROJEKTU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+C:\Users\tomas\Projekty\WindowsEventAnalyzer\
+
+
+⚡ SZYBKIE URUCHOMIENIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Prawy przycisk na: uruchom.bat
+2. "Uruchom jako administrator"
+3. Gotowe!
+
+
+📁 PLIKI W PROJEKCIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+windows_event_analyzer.py  → Główny program (1200+ linii kodu)
+                              • Odczyt dzienników Windows
+                              • Kategoryzacja według ważności
+                              • Baza rozwiązań 33+ problemów
+                              • Generowanie raportów TXT i HTML
+
+example_usage.py           → 11 przykładów zaawansowanego użycia
+                              • Filtrowanie zdarzeń
+                              • Audit bezpieczeństwa
+                              • Sprawdzanie zdrowia dysku
+                              • Niestandardowe raporty
+                              • Raporty HTML i oba formaty
+
+requirements.txt           → Wymagane biblioteki (pywin32)
+
+install.bat               → Automatyczna instalacja bibliotek
+
+uruchom.bat               → Łatwe uruchomienie jako Admin
+
+README_EventAnalyzer.md   → Pełna dokumentacja techniczna
+                              • Szczegółowy opis funkcji
+                              • API programistyczne
+                              • Rozszerzanie bazy wiedzy
+
+SZYBKI_START.txt         → Przewodnik dla początkujących
+
+INFO.txt                 → Ten plik
+
+
+🎯 CO ROBI TEN PROGRAM?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Analizuje dzienniki Windows (System, Application, Security)
+✓ Kategoryzuje problemy: Krytyczne → Błędy → Ostrzeżenia → Info
+✓ Sugeruje rozwiązania dla 15+ popularnych problemów
+✓ Generuje szczegółowy raport z rekomendacjami
+✓ Wykrywa problemy z dyskiem, BSOD, próby włamania, błędy usług
+✓ Zapisuje raporty do plików .txt
+
+
+🔧 WYMAGANIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Windows 10/11
+• Python 3.7+ (zainstalowany: Python 3.13.9)
+• Uprawnienia administratora
+• Biblioteka pywin32 (zainstalowana)
+
+
+✅ STATUS: Gotowy do użycia!
+
+
+📊 PRZYKŁADOWE MOŻLIWOŚCI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Analiza ostatnich 24h, 48h, 7 dni lub własny zakres
+• Wykrywanie problemów z dyskiem (Event ID 7, 51)
+• Monitorowanie nieudanych logowań (Event ID 4625)
+• Analiza BSOD (Event ID 1001, 6008)
+• Sprawdzanie awarii aplikacji (Event ID 1000)
+• Diagnoza błędów usług (Event ID 7000, 7001)
+• Problemy sieciowe (Event ID 1014, 5719)
+
+
+📈 STATYSTYKI Z OSTATNIEGO TESTU (2025-11-05)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Przeanalizowano: 23,718 zdarzeń (ostatnie 24h)
+• Błędy: 93 (0.4%)
+• Ostrzeżenia: 31 (0.1%)
+• Informacyjne: 23,594 (99.5%)
+
+Status systemu: Stabilny ✓
+
+
+💡 PRZYDATNE KOMENDY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Uruchomienie podstawowe:
+    python windows_event_analyzer.py
+
+Uruchomienie przykładów:
+    python example_usage.py
+
+Instalacja/aktualizacja bibliotek:
+    install.bat
+
+
+📞 POMOC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Zobacz:
+• SZYBKI_START.txt - dla początkujących
+• README_EventAnalyzer.md - pełna dokumentacja techniczna
+• example_usage.py - przykłady programistyczne
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Data utworzenia: 2025-11-05
+Wersja: 1.0
+Autor: Claude Code
+Status: ✓ Działający i przetestowany

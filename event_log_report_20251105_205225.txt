@@ -1,0 +1,351 @@
+================================================================================
+RAPORT ANALIZY DZIENNIKA ZDARZEŃ WINDOWS 11
+================================================================================
+Data wygenerowania: 2025-11-05 20:52:25
+Okres analizy: Ostatnie 48 godzin
+Analizowane dzienniki: System, Application, Security
+
+--------------------------------------------------------------------------------
+PODSUMOWANIE STATYSTYK
+--------------------------------------------------------------------------------
+Łączna liczba zdarzeń: 32680
+
+Podział według ważności:
+  BŁĄD            :    167 (  0.5%)
+  OSTRZEŻENIE     :    100 (  0.3%)
+  INFORMACJA      :  32413 ( 99.2%)
+
+--------------------------------------------------------------------------------
+TOP 10 NAJCZĘSTSZYCH ZDARZEŃ (Event ID)
+--------------------------------------------------------------------------------
+Event ID  5379 : 16947 wystąpień - Odczytano poświadczenia Credential Manager
+Event ID  4907 : 6880 wystąpień - Zmieniono ustawienia audytu obiektu
+Event ID  4798 : 3244 wystąpień - Wyliczono członkostwo użytkownika w grupie lokalnej
+Event ID  4624 :  718 wystąpień - Udane logowanie
+Event ID  4672 :  702 wystąpień - Przypisano specjalne uprawnienia do nowego logowania
+Event ID     1 :  454 wystąpień - Usługa Event Log została uruchomiona
+Event ID  4799 :  313 wystąpień - Wyliczono członkostwo w grupie zabezpieczonej
+Event ID  5058 :  263 wystąpień - Operacja na pliku klucza kryptograficznego
+Event ID  5061 :  250 wystąpień - Operacja kryptograficzna
+Event ID  1072 :  197 wystąpień - Użytkownik zainicjował restart lub wyłączenie systemu
+
+--------------------------------------------------------------------------------
+SZCZEGÓŁOWA ANALIZA - ZDARZENIA KRYTYCZNE I BŁĘDY (167)
+--------------------------------------------------------------------------------
+
+================================================================================
+Event ID: 10010
+Ważność: BŁĄD
+Liczba wystąpień: 123
+Źródło: DCOM
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-04 20:06:35
+
+Opis problemu:
+  DCOM - Serwer nie zarejestrował się w wymaganym czasie
+
+Zalecane rozwiązania:
+  1. Zazwyczaj nieszkodliwe - typowy problem Windows
+  2. Może być związane z RuntimeBroker lub ShellHWDetection
+  3. Jeśli chcesz naprawić: Component Services -> DCOM Config
+  4. W większości przypadków można bezpiecznie zignorować
+
+Przykładowa wiadomość zdarzenia:
+  <The description for Event ID ( 10010 ) in Source ( 'DCOM' ) could not be found. It contains the following insertion string(s):'{AB8902B4-09CA-4BB6-B78D-A8F59079A8D5}'.>...
+
+================================================================================
+Event ID: 78
+Ważność: BŁĄD
+Liczba wystąpień: 21
+Źródło: SideBySide
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 20:42:45
+
+Opis problemu:
+  SideBySide - Błąd konfiguracji aplikacji
+
+Zalecane rozwiązania:
+  1. Aplikacja ma konflikt wersji składników (manifests)
+  2. Przeinstaluj aplikację
+  3. Zainstaluj najnowsze Visual C++ Redistributables
+  4. Sprawdź czy aplikacja jest kompatybilna z Windows 11
+
+Przykładowa wiadomość zdarzenia:
+  Nie można wygenerować kontekstu aktywacji dla „C:\Users\tomas\AppData\Local\CapCut\Apps\CapCut.exe”. Błąd w pliku manifestu lub w pliku zasad „” w wierszu .
+Wersja składnika wymagana przez aplikację powoduje konflikt z inną wersją składnika, która jest już aktywna.
+Składniki powodujące konflikt:
+...
+
+================================================================================
+Event ID: 13
+Ważność: BŁĄD
+Liczba wystąpień: 6
+Źródło: VSS
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 17:31:12
+
+Opis problemu:
+  VSS - Błąd usługi kopiowania woluminów w tle
+
+Zalecane rozwiązania:
+  1. Często występuje podczas wyłączania systemu - można zignorować
+  2. Sprawdź czy usługa Volume Shadow Copy działa: services.msc
+  3. Uruchom: vssadmin list writers aby sprawdzić status
+  4. Jeśli problem się powtarza, zrestartuj usługę VSS
+
+Przykładowa wiadomość zdarzenia:
+  Informacje Usługi kopiowania woluminów w tle: nie można uruchomić serwera usługi COM z identyfikatorem CLSID {4e14fba2-2e22-11d1-9964-00c04fbbb345} i nazwą CEventSystem. [0x8007045b, Trwa proces zamykania systemu.
+]
+
+...
+
+================================================================================
+Event ID: 8193
+Ważność: BŁĄD
+Liczba wystąpień: 5
+Źródło: VSS
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 17:31:12
+
+Opis problemu:
+  VSS - Błąd podczas wywoływania CoCreateInstance
+
+Zalecane rozwiązania:
+  1. Związane z zamykaniem systemu - zazwyczaj nieszkodliwe
+  2. Upewnij się że usługa VSS jest uruchomiona
+  3. Sprawdź czy masz wystarczające uprawnienia
+  4. Zrestartuj usługę Volume Shadow Copy
+
+Przykładowa wiadomość zdarzenia:
+  Błąd Usługi kopiowania woluminów w tle: nieoczekiwany błąd podczas wywoływania procedury CoCreateInstance.  hr = 0x8007045b, Trwa proces zamykania systemu.
+.
+
+...
+
+================================================================================
+Event ID: 1801
+Ważność: BŁĄD
+Liczba wystąpień: 3
+Źródło: Microsoft-Windows-TPM-WMI
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-05 17:36:51
+
+Opis problemu:
+  TPM/Secure Boot - Wymagana aktualizacja certyfikatów
+
+Zalecane rozwiązania:
+  1. Windows Update powinien automatycznie zaktualizować certyfikaty
+  2. Sprawdź dostępne aktualizacje Windows Update
+  3. Może być związane z UEFI/BIOS - sprawdź aktualizacje
+  4. To informacyjne - system działa normalnie
+
+Przykładowa wiadomość zdarzenia:
+  Secure Boot CA/keys need to be updated. This device signature information is included here.
+DeviceAttributes: BaseBoardManufacturer:Micro-Star International Co., Ltd.;FirmwareManufacturer:American Megatrends International, LLC.;FirmwareVersion:1.K0;OEMModelBaseBoard:B650 GAMING PLUS WIFI (MS-7E26);...
+
+================================================================================
+Event ID: 1023
+Ważność: BŁĄD
+Liczba wystąpień: 2
+Źródło: Microsoft-Windows-Perflib
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 17:00:08
+
+Opis problemu:
+  Perflib - Nie można załadować biblioteki DLL licznika wydajności
+
+Zalecane rozwiązania:
+  1. Biblioteka sysmain.dll może być zablokowana lub uszkodzona
+  2. Uruchom: lodctr /R aby przebudować liczniki wydajności
+  3. Sprawdź integralność plików: sfc /scannow
+  4. Może być spowodowane przez problemy z usługą SysMain
+
+Przykładowa wiadomość zdarzenia:
+  System Windows nie może załadować biblioteki DLL rozszerzalnego licznika „C:\WINDOWS\system32\sysmain.dll” (kod błędu systemu Win32: 126).
+...
+
+================================================================================
+Event ID: 153
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: nvlddmkm
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-04 20:05:51
+
+Opis problemu:
+  Błąd sterownika karty graficznej (NVIDIA)
+
+Zalecane rozwiązania:
+  1. Zaktualizuj sterowniki NVIDIA do najnowszej wersji
+  2. Użyj DDU (Display Driver Uninstaller) i przeinstaluj sterowniki
+  3. Sprawdź temperatury GPU
+  4. Zweryfikuj zasilanie karty graficznej
+  5. Sprawdź czy karta nie jest przetaktowana
+
+Przykładowa wiadomość zdarzenia:
+  <The description for Event ID ( 153 ) in Source ( 'nvlddmkm' ) could not be found. It contains the following insertion string(s):'\\Device\\Video3, Error occurred on GPUID: 100'.>...
+
+================================================================================
+Event ID: 36
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: volsnap
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-04 16:53:27
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 36'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Wykonywanie kopii w tle woluminu C: zostało przerwane, ponieważ nie można powiększyć magazynu kopii w tle z powodu limitu wprowadzonego przez użytkownika.
+...
+
+================================================================================
+Event ID: 1000
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: Application Error
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-04 16:53:27
+
+Opis problemu:
+  Awaria aplikacji
+
+Zalecane rozwiązania:
+  1. Zaktualizuj aplikację do najnowszej wersji
+  2. Przeinstaluj aplikację
+  3. Sprawdź zgodność z Windows 11
+  4. Uruchom aplikację jako Administrator
+  5. Sprawdź brakujące zależności (.NET, Visual C++ Redistributables)
+
+Przykładowa wiadomość zdarzenia:
+  Nazwa aplikacji powodującej błąd: PhoneExperienceHost.exe, wersja: 1.25101.25.0, sygnatura czasowa: 0x68d50000
+Nazwa modułu powodującego błąd: KERNELBASE.dll, wersja: 10.0.26100.6899, sygnatura czasowa: 0x761b8f73
+Kod wyjątku: 0xe0434352
+Przesunięcie błędu: 0x00000000000c804a
+Identyfikator proce...
+
+================================================================================
+Event ID: 1026
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: .NET Runtime
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-04 16:53:27
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 1026'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Application: PhoneExperienceHost.exe
+CoreCLR Version: 9.0.1025.47515
+.NET Version: 9.0.10
+Description: The process was terminated due to an unhandled exception.
+Exception Info: System.AggregateException: One or more tasks failed to register. () () () ()
+ ---> System.Runtime.InteropServices.COMExcep...
+
+================================================================================
+Event ID: 20
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: Microsoft-Windows-WindowsUpdateClient
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-04 02:01:55
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 20'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Instalacja nie powiodła się: system Windows nie mógł zainstalować następującej aktualizacji, ponieważ wystąpił błąd 0x80242016: 2025-10 Aktualizacja zbiorcza dla systemu Windows 11 Version 24H2 dla systemów opartych na architekturze x64 (KB5066835) (26100.6899).
+...
+
+================================================================================
+Event ID: 7023
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: Service Control Manager
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-04 02:01:42
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 7023'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Usługa Usługa koordynatora aktualizacji zakończyła działanie; wystąpił następujący błąd: 
+%%2149884192
+...
+
+================================================================================
+Event ID: 1022
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: .NET Runtime
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-03 21:39:37
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 1022'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  .NET Runtime version 4.0.30319.0 - Wystąpił błąd podczas inicjacji infrastruktury dołączania interfejsu API profilowania. Ten proces nie zezwoli na dołączenie profilera. HRESULT: 0x80004005.  Identyfikator procesu (liczba dziesiętna): 25512. Identyfikator komunikatu: [0x2509].
+...
+
+--------------------------------------------------------------------------------
+PODSUMOWANIE OSTRZEŻEŃ (100)
+--------------------------------------------------------------------------------
+  Event ID 10010 ( 48x) : DCOM - Serwer nie zarejestrował się w wymaganym czasie
+  Event ID 10016 ( 29x) : Błąd uprawnień DCOM
+  Event ID   219 (  5x) : Nieznany problem
+  Event ID 10002 (  5x) : Nieznany problem
+  Event ID  1014 (  4x) : Błąd rozpoznawania nazw DNS
+  Event ID   100 (  2x) : Nieznany problem
+  Event ID  1008 (  2x) : Nieznany problem
+  Event ID  6004 (  2x) : Nieznany problem
+  Event ID 10024 (  2x) : Nieznany problem
+  Event ID  1073 (  1x) : Nieznany problem
+
+--------------------------------------------------------------------------------
+REKOMENDACJE KOŃCOWE
+--------------------------------------------------------------------------------
+  [!] Wysoka liczba błędów (167). Zalecane jest przeprowadzenie konserwacji systemu.
+
+Ogólne zalecenia konserwacyjne:
+  1. Regularnie aktualizuj Windows Update
+  2. Utrzymuj aktualne sterowniki urządzeń
+  3. Wykonuj regularne backupy danych
+  4. Monitoruj temperatury komponentów
+  5. Czyść pliki tymczasowe (Disk Cleanup)
+
+================================================================================
+KONIEC RAPORTU
+================================================================================

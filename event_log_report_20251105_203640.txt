@@ -1,0 +1,172 @@
+================================================================================
+RAPORT ANALIZY DZIENNIKA ZDARZEŃ WINDOWS 11
+================================================================================
+Data wygenerowania: 2025-11-05 20:36:40
+Okres analizy: Ostatnie 24 godzin
+Analizowane dzienniki: System, Application, Security
+
+--------------------------------------------------------------------------------
+PODSUMOWANIE STATYSTYK
+--------------------------------------------------------------------------------
+Łączna liczba zdarzeń: 23713
+
+Podział według ważności:
+  BŁĄD            :     32 (  0.1%)
+  OSTRZEŻENIE     :     29 (  0.1%)
+  INFORMACJA      :  23652 ( 99.7%)
+
+--------------------------------------------------------------------------------
+TOP 10 NAJCZĘSTSZYCH ZDARZEŃ (Event ID)
+--------------------------------------------------------------------------------
+Event ID  5379 : 11242 wystąpień - Nieznany problem
+Event ID  4907 : 6880 wystąpień - Nieznany problem
+Event ID  4798 : 2143 wystąpień - Nieznany problem
+Event ID  4624 :  587 wystąpień - Udane logowanie
+Event ID  4672 :  573 wystąpień - Nieznany problem
+Event ID  4799 :  301 wystąpień - Nieznany problem
+Event ID     1 :  191 wystąpień - Nieznany problem
+Event ID  5058 :  160 wystąpień - Nieznany problem
+Event ID  5061 :  152 wystąpień - Nieznany problem
+Event ID  1072 :   99 wystąpień - Nieznany problem
+
+--------------------------------------------------------------------------------
+SZCZEGÓŁOWA ANALIZA - ZDARZENIA KRYTYCZNE I BŁĘDY (32)
+--------------------------------------------------------------------------------
+
+================================================================================
+Event ID: 78
+Ważność: BŁĄD
+Liczba wystąpień: 18
+Źródło: SideBySide
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 19:28:48
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 78'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Nie można wygenerować kontekstu aktywacji dla „C:\Users\tomas\AppData\Local\CapCut\Apps\CapCut.exe”. Błąd w pliku manifestu lub w pliku zasad „” w wierszu .
+Wersja składnika wymagana przez aplikację powoduje konflikt z inną wersją składnika, która jest już aktywna.
+Składniki powodujące konflikt:
+...
+
+================================================================================
+Event ID: 13
+Ważność: BŁĄD
+Liczba wystąpień: 6
+Źródło: VSS
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 17:31:12
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 13'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Informacje Usługi kopiowania woluminów w tle: nie można uruchomić serwera usługi COM z identyfikatorem CLSID {4e14fba2-2e22-11d1-9964-00c04fbbb345} i nazwą CEventSystem. [0x8007045b, Trwa proces zamykania systemu.
+]
+
+...
+
+================================================================================
+Event ID: 8193
+Ważność: BŁĄD
+Liczba wystąpień: 5
+Źródło: VSS
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 17:31:12
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 8193'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Błąd Usługi kopiowania woluminów w tle: nieoczekiwany błąd podczas wywoływania procedury CoCreateInstance.  hr = 0x8007045b, Trwa proces zamykania systemu.
+.
+
+...
+
+================================================================================
+Event ID: 1801
+Ważność: BŁĄD
+Liczba wystąpień: 2
+Źródło: Microsoft-Windows-TPM-WMI
+Dziennik: System
+Ostatnie wystąpienie: 2025-11-05 17:36:51
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 1801'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  Secure Boot CA/keys need to be updated. This device signature information is included here.
+DeviceAttributes: BaseBoardManufacturer:Micro-Star International Co., Ltd.;FirmwareManufacturer:American Megatrends International, LLC.;FirmwareVersion:1.K0;OEMModelBaseBoard:B650 GAMING PLUS WIFI (MS-7E26);...
+
+================================================================================
+Event ID: 1023
+Ważność: BŁĄD
+Liczba wystąpień: 1
+Źródło: Microsoft-Windows-Perflib
+Dziennik: Application
+Ostatnie wystąpienie: 2025-11-05 17:00:08
+
+Opis problemu:
+  Nieznany problem
+
+Zalecane rozwiązania:
+  1. Wyszukaj Event ID w Google: 'Windows Event ID 1023'
+  2. Sprawdź szczegóły w Event Viewer
+  3. Przejrzyj dokumentację Microsoft
+  4. Rozważ utworzenie wątku na forum Microsoft Community
+
+Przykładowa wiadomość zdarzenia:
+  System Windows nie może załadować biblioteki DLL rozszerzalnego licznika „C:\WINDOWS\system32\sysmain.dll” (kod błędu systemu Win32: 126).
+...
+
+--------------------------------------------------------------------------------
+PODSUMOWANIE OSTRZEŻEŃ (29)
+--------------------------------------------------------------------------------
+  Event ID 10016 ( 18x) : Błąd uprawnień DCOM
+  Event ID   219 (  3x) : Nieznany problem
+  Event ID 10002 (  3x) : Nieznany problem
+  Event ID  1014 (  2x) : Błąd rozpoznawania nazw DNS
+  Event ID   100 (  1x) : Nieznany problem
+  Event ID  1008 (  1x) : Nieznany problem
+  Event ID  6004 (  1x) : Nieznany problem
+
+--------------------------------------------------------------------------------
+REKOMENDACJE KOŃCOWE
+--------------------------------------------------------------------------------
+  [!] Wysoka liczba błędów (32). Zalecane jest przeprowadzenie konserwacji systemu.
+
+Ogólne zalecenia konserwacyjne:
+  1. Regularnie aktualizuj Windows Update
+  2. Utrzymuj aktualne sterowniki urządzeń
+  3. Wykonuj regularne backupy danych
+  4. Monitoruj temperatury komponentów
+  5. Czyść pliki tymczasowe (Disk Cleanup)
+
+================================================================================
+KONIEC RAPORTU
+================================================================================
