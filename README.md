@@ -1,2 +1,169 @@
 # WindowsEventAnalyzer
-WindowsEventAnalyzer
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║         ANALIZATOR DZIENNIKA ZDARZEŃ WINDOWS 11 - SZYBKI START              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📋 WYMAGANIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  • Windows 10/11
+  • Python 3.7 lub nowszy
+  • Uprawnienia administratora
+
+
+🚀 INSTALACJA (3 KROKI)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  Upewnij się, że masz zainstalowanego Pythona
+    → Sprawdź: otwórz CMD i wpisz: python --version
+    → Jeśli nie masz: pobierz z https://www.python.org/downloads/
+
+2️⃣  Uruchom instalację (dubkle klik)
+    → install.bat
+
+3️⃣  Gotowe! 🎉
+
+
+▶️ URUCHOMIENIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SPOSÓB 1: Użyj pliku .bat
+  1. Kliknij PRAWYM przyciskiem na: uruchom.bat
+  2. Wybierz: "Uruchom jako administrator"
+  3. Postępuj według instrukcji na ekranie
+
+SPOSÓB 2: Ręcznie z PowerShell/CMD
+  1. Otwórz PowerShell lub CMD jako Administrator
+  2. Przejdź do katalogu z plikami:
+     cd C:\Users\tomas
+  3. Uruchom:
+     python windows_event_analyzer.py
+
+
+📊 CO ROBI PROGRAM?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Analizuje dzienniki zdarzeń Windows (System, Application, Security)
+✓ Kategoryzuje problemy według ważności
+✓ Sugeruje konkretne rozwiązania dla każdego problemu
+✓ Generuje szczegółowy raport z rekomendacjami
+✓ Zapisuje raport do pliku .txt
+
+
+📁 PLIKI W PROJEKCIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  windows_event_analyzer.py  → Główny program
+  requirements.txt            → Lista wymaganych bibliotek
+  install.bat                 → Instalator
+  uruchom.bat                 → Uruchamia program jako Admin
+  example_usage.py            → Przykłady zaawansowanego użycia
+  README_EventAnalyzer.md     → Pełna dokumentacja
+  SZYBKI_START.txt           → Ten plik
+
+
+💡 PRZYKŁADOWE UŻYCIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  C:\Users\tomas> python windows_event_analyzer.py
+
+  Wybierz zakres czasowy analizy:
+  1. Ostatnie 24 godziny (domyślnie)
+  2. Ostatnie 48 godzin
+  3. Ostatnie 7 dni
+  4. Własny zakres
+
+  Wybór (1-4) [1]: 1
+
+  Analizuję dzienniki zdarzeń z ostatnich 24 godzin...
+
+  Czytam dziennik: System...
+    Znaleziono 1847 zdarzeń
+
+  Czytam dziennik: Application...
+    Znaleziono 943 zdarzeń
+
+  Czytam dziennik: Security...
+    Znaleziono 2156 zdarzeń
+
+  [... raport ...]
+
+  Czy zapisać raport do pliku? (t/n) [t]: t
+  Raport zapisany do pliku: event_log_report_20250105_143022.txt
+
+
+⚙️ OPCJE ZAAWANSOWANE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Zobacz plik: example_usage.py
+  Zawiera 9 przykładów programistycznego użycia analizatora:
+    • Filtrowanie tylko błędów krytycznych
+    • Wyszukiwanie konkretnych Event ID
+    • Generowanie statystyk
+    • Audit bezpieczeństwa
+    • Sprawdzanie zdrowia dysku
+    • i więcej...
+
+
+🔧 ROZWIĄZYWANIE PROBLEMÓW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Python nie jest rozpoznawany..."
+   → Zainstaluj Python i zaznacz "Add Python to PATH"
+   → Zrestartuj CMD/PowerShell po instalacji
+
+❌ "Access Denied" lub "Odmowa dostępu"
+   → Uruchom jako Administrator!
+   → Prawy przycisk → "Uruchom jako administrator"
+
+❌ "ModuleNotFoundError: No module named 'win32evtlog'"
+   → Uruchom ponownie: install.bat
+   → Lub ręcznie: pip install pywin32
+
+❌ Program działa bardzo wolno
+   → To normalne przy dużej ilości zdarzeń
+   → Zmniejsz zakres czasowy (np. 24h zamiast 7 dni)
+   → Dziennik Security może mieć tysiące wpisów
+
+
+📖 PEŁNA DOKUMENTACJA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Szczegółowa dokumentacja znajduje się w pliku:
+  → README_EventAnalyzer.md
+
+
+📞 NAJCZĘSTSZE PYTANIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Q: Czy program modyfikuje coś w systemie?
+A: NIE! Program tylko ODCZYTUJE dzienniki. Nie zmienia żadnych ustawień.
+
+Q: Czy to bezpieczne?
+A: TAK! Kod jest otwarty do przejrzenia. Program nie łączy się z internetem.
+
+Q: Jak często uruchamiać analizę?
+A: Zalecane codziennie lub cotygodniowo dla utrzymania zdrowia systemu.
+
+Q: Co zrobić z wygenerowanym raportem?
+A: Przejrzyj sekcję "REKOMENDACJE KOŃCOWE" i wykonaj sugerowane działania.
+
+Q: Czy mogę dodać własne rozwiązania problemów?
+A: TAK! Zobacz sekcję "Rozszerzanie bazy wiedzy" w README.
+
+
+⚡ SZYBKIE WSKAZÓWKI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✓ Zawsze uruchamiaj jako Administrator
+  ✓ Zachowaj wygenerowane raporty do porównania w przyszłości
+  ✓ Zwróć szczególną uwagę na zdarzenia KRYTYCZNE (czerwone)
+  ✓ Jeśli widzisz błędy dysku (Event ID 7, 51) → NATYCHMIAST backup!
+  ✓ Monitoruj próby logowania (Event ID 4625) pod kątem włamania
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                       GOTOWY DO UŻYCIA! POWODZENIA! 🚀         
